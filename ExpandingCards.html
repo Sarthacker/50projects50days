@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exapanding Cards</title>
+    <style>
+        .cont{
+            display:flex;
+            width:100%;
+            height:100vh;
+            justify-content:center;
+            align-items: center;
+        }
+        .img{
+            /* border:10px solid white; */
+            height:80vh;
+            cursor: pointer;
+            border-radius: 50px;
+            transition:0.7s ease-in;
+            overflow:hidden;
+             /* if you comment out the overflow hidden part you get to see some more effect */
+            margin: 10px;
+        }
+        .img1buffer{
+            width:50%;
+        }
+        .img1{
+            width:7%;
+        }
+        .img2{
+            width:7%;
+        }
+        .img3{
+            width:7%;
+        }
+        .img4{
+            width:7%;
+        }
+        .img5{
+            width:7%;
+        }
+        .buffer{
+            width:50%;
+        }
+        .photo{
+            position: relative;
+            height:100%;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div onclick="in1()" id="box1" class="img1buffer img"><img class="photo" src="https://wallpapercave.com/w/wp3819619.jpg"></div>
+        <div onclick="in2()" id="box2" class="img2 img"><img class="photo" src="https://wallpapercave.com/w/wp3819649.jpg"></div>
+        <div onclick="in3()" id="box3" class="img3 img"><img class="photo" src="https://wallpapercave.com/w/wp3819653.jpg"></div>
+        <div onclick="in4()" id="box4" class="img4 img"><img class="photo" src="https://wallpapercave.com/w/wp3819666.jpg"></div>
+        <div onclick="in5()" id="box5" class="img5 img"><img class="photo" src="https://wallpapercave.com/w/wp3819690.jpg"></div>
+    </div>
+    <script>
+        let s1=document.getElementById("box1")
+        function in1(){
+            s1.setAttribute("class", "buffer img")
+            s2.setAttribute("class", "img2 img")
+            s3.setAttribute("class", "img3 img")
+            s4.setAttribute("class", "img4 img")
+            s5.setAttribute("class", "img5 img")
+        }
+        let s2=document.getElementById("box2")
+        function in2(){
+            s1.setAttribute("class", "img1 img")
+            s2.setAttribute("class", "buffer img")
+            s3.setAttribute("class", "img3 img")
+            s4.setAttribute("class", "img4 img")
+            s5.setAttribute("class", "img5 img")
+        }
+        let s3=document.getElementById("box3")
+        function in3(){
+            s1.setAttribute("class", "img1 img")
+            s2.setAttribute("class", "img2 img")
+            s3.setAttribute("class", "buffer img")
+            s4.setAttribute("class", "img4 img")
+            s5.setAttribute("class", "img5 img")
+        }
+        let s4=document.getElementById("box4")
+        function in4(){
+            s1.setAttribute("class", "img1 img")
+            s2.setAttribute("class", "img2 img")
+            s3.setAttribute("class", "img3 img")
+            s4.setAttribute("class", "buffer img")
+            s5.setAttribute("class", "img5 img")
+        }
+        let s5=document.getElementById("box5")
+        function in5(){
+            s1.setAttribute("class", "img1 img")
+            s2.setAttribute("class", "img2 img")
+            s3.setAttribute("class", "img3 img")
+            s4.setAttribute("class", "img4 img")
+            s5.setAttribute("class", "buffer img")
+        }
+    </script>
+</body>
+</html>
